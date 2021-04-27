@@ -265,6 +265,10 @@ function _openEcosia() {
 }
 
 function init(extensionMeta) {
+    logDebug("Écosia search provider started");
+}
+
+function enable() {
     button = new St.Bin({
         style_class: 'panel-button',
         reactive: true,
@@ -303,9 +307,6 @@ function init(extensionMeta) {
             _SetButtonIcon('base');
         }
     );
-}
-
-function enable() {
     logDebug("Enable Écosia search provider");
     if (!ecosiaSearchProvider) {
         logDebug("Enable Écosia search provider");
